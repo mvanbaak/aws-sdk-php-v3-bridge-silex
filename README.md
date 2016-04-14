@@ -1,5 +1,9 @@
 # AWS SDK for PHP - Version 3 Upgrade Bridge Provider for Silex
 
+[![Latest Stable Version](https://poser.pugx.org/mvbcoding/aws-sdk-php-v3-bridge-silex/v/stable)](https://packagist.org/packages/mvbcoding/aws-sdk-php-v3-bridge-silex)
+[![Total Downloads](https://poser.pugx.org/mvbcoding/aws-sdk-php-v3-bridge-silex/downloads)](https://packagist.org/packages/mvbcoding/aws-sdk-php-v3-bridge-silex)
+[![License](https://poser.pugx.org/mvbcoding/aws-sdk-php-v3-bridge-silex/license)](https://packagist.org/packages/mvbcoding/aws-sdk-php-v3-bridge-silex)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/63d301ce-db14-4bf1-a7a9-329b135617bf/mini.png)](https://insight.sensiolabs.com/projects/63d301ce-db14-4bf1-a7a9-329b135617bf)
 [![Codeship build status](https://codeship.com/projects/988a8460-e445-0133-d9c3-2ef0590de381/status?branch=master)](https://codeship.com/projects/146266)
 
 A simple Silex service provider for including the [AWS SDK for PHP - Version 3 Upgrade Bridge](https://github.com/aws/aws-sdk-php-v3-bridge).
