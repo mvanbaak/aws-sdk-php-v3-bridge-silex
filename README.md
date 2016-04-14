@@ -1,5 +1,6 @@
 # AWS SDK for PHP - Version 3 Upgrade Bridge Provider for Silex
 
+[![Codeship build status](https://codeship.com/projects/988a8460-e445-0133-d9c3-2ef0590de381/status?branch=master)](https://codeship.com/projects/146266)
 
 A simple Silex service provider for including the [AWS SDK for PHP - Version 3 Upgrade Bridge](https://github.com/aws/aws-sdk-php-v3-bridge).
 
