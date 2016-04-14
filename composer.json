@@ -1,0 +1,33 @@
+{
+    "name": "mvbcoding/aws-sdk-php-v3-bridge-silex",
+    "homepage": "https://github.com/aws/aws-sdk-php-v3-bridge",
+    "description": "A simple Silex service provider for including the AWS SDK v3 bridge for PHP.",
+    "keywords": ["silex","aws","amazon","sdk","v3","sdb","importexport"],
+    "type":"library",
+    "license":"BSD-2-Clause",
+    "authors":[
+        {
+            "name":"Michiel van Baak",
+            "email": "mvanbaak@mvbcoding.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "silex/silex": "1.*",
+        "aws/aws-sdk-php-v3-bridge": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MvbCoding\\Silex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MvbCoding\\Silex\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3",
+        "squizlabs/php_codesniffer": "^2.6"
+    }
+}

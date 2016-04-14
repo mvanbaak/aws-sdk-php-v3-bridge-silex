@@ -1,0 +1,63 @@
+# AWS SDK for PHP - Version 3 Upgrade Bridge Provider for Silex
+
+
+A simple Silex service provider for including the [AWS SDK for PHP - Version 3 Upgrade Bridge](https://github.com/aws/aws-sdk-php-v3-bridge).
+
+## Installation
+
+The AWS Service Provider can be installed via [Composer](http://getcomposer.org) by requiring the
+`mvbcoding/aws-sdk-php-v3-bridge-silex` package in your project's `composer.json`.
+
+```json
+{
+    "require": {
+        "mvbcoding/aws-sdk-php-v3-bridge-silex": "^1.0"
+    }
+}
+```
+
+## Usage
+
+Register the AWS Service Provider in your Silex application and provide your AWS SDK for PHP configuration to the app
+in the `aws.config` key. `$app['aws.config']` should contain an array of configuration options or the path to a
+configuration file. This value is passed directly into `new Aws\SimpleDb\SimpleDbClient` and `new Aws\ImportExport\ImportExportClient`.
+
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use MvbCoding\Silex\AwsV3BridgeServiceProvider;
+use Silex\Application;
+
+$app = new Application();
+
+$app->register(new AwsV3BridgeServiceProvider(), array(
+    'aws.config' => array(
+        'version' => 'latest',
+        'region' => 'eu-west-1',
+    )
+));
+
+$app->match('/', function () use ($app) {
+    // Create a list of your SimpleDb Domains
+    $domains = $app['aws.simpledb']->listDomains();
+    $output = "<ul>\n";
+    foreach ($domains['DomainNames'] as $domain) {
+        $output .= "<li>{$domain}</li>\n";
+    }
+    $output .= "</ul>\n";
+
+    return $output;
+});
+
+$app->run();
+```
+
+## Links
+
+* [AWS SDK for PHP - Version 3 Upgrade Bridge](https://github.com/aws/aws-sdk-php-v3-bridge)
+* [License](https://opensource.org/licenses/BSD-2-Clause)
+* [Silex website](http://silex.sensiolabs.org)
+* [MvBCoding website](http://www.mvbcoding.nl)
+
