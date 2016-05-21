@@ -28,30 +28,6 @@ class AwsV3BridgeServiceProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('us-east-1', $app['aws.simpledb']->getRegion());
     }
 
-    public function testRegisterAwsImportExportClient()
-    {
-        //setup silex and aws service provider
-        $app = new Application();
-        $provider = new AwsV3BridgeServiceProvider();
-        $app->register($provider, [
-            'aws.config' => [
-                'version' => '2010-06-01',
-                'region' => 'us-east-1',
-                'credentials' => [
-                    'key' => 'fake-aws-key',
-                    'secret' => 'fake-aws-secret',
-                ],
-            ],
-        ]);
-        $provider->boot($app);
-
-        $this->assertEquals('2010-06-01', $app['aws.config']['version']);
-        $this->assertEquals('us-east-1', $app['aws.config']['region']);
-        $this->assertEquals('2010-06-01', $app['aws.importexport']->getApi()->getApiVersion());
-        $this->assertEquals('us-east-1', $app['aws.importexport']->getRegion());
-    }
-
-
     /**
      * @expectedException \InvalidArgumentException
      */

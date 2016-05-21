@@ -16,7 +16,7 @@ The AWS Service Provider can be installed via [Composer](http://getcomposer.org)
 ```json
 {
     "require": {
-        "mvbcoding/aws-sdk-php-v3-bridge-silex": "^1.0"
+        "mvbcoding/aws-sdk-php-v3-bridge-silex": "^2.0"
     }
 }
 ```
@@ -25,7 +25,7 @@ The AWS Service Provider can be installed via [Composer](http://getcomposer.org)
 
 Register the AWS Service Provider in your Silex application and provide your AWS SDK for PHP configuration to the app
 in the `aws.config` key. `$app['aws.config']` should contain an array of configuration options or the path to a
-configuration file. This value is passed directly into `new Aws\SimpleDb\SimpleDbClient` and `new Aws\ImportExport\ImportExportClient`.
+configuration file. This value is passed directly into `new Aws\SimpleDb\SimpleDbClient`.
 
 ```php
 <?php
