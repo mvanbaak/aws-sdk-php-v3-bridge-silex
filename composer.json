@@ -1,6 +1,6 @@
 {
     "name": "mvbcoding/aws-sdk-php-v3-bridge-silex",
-    "homepage": "https://github.com/aws/aws-sdk-php-v3-bridge",
+    "homepage": "https://bitbucket.org/mvbcoding/aws-sdk-php-v3-bridge-silex",
     "description": "A simple Silex service provider for including the AWS SDK v3 bridge for PHP.",
     "keywords": ["silex","aws","amazon","sdk","v3","sdb","importexport"],
     "type":"library",
