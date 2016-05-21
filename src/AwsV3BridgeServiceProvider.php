@@ -12,7 +12,7 @@ use Silex\ServiceProviderInterface;
  */
 class AwsV3BridgeServiceProvider implements ServiceProviderInterface
 {
-    const VERSION = '1.0.0';
+    const VERSION = '2.0.1';
 
     public function register(Application $app)
     {
@@ -24,16 +24,6 @@ class AwsV3BridgeServiceProvider implements ServiceProviderInterface
                 'SXMOD/' . self::VERSION,
             ]]);
         });
-
-        $app['aws.importexport'] = $app->share(function (Application $app) {
-            $config = isset($app['aws.config']) ? $app['aws.config'] : [];
-
-            return new ImportExportClient($config + ['ua_append' => [
-                'Silex/' . Application::VERSION,
-                'SXMOD/' . self::VERSION,
-            ]]);
-        });
-
     }
 
     public function boot(Application $app)
