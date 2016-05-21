@@ -2,7 +2,6 @@
 
 namespace MvbCoding\Silex;
 
-use Aws\ImportExport\ImportExportClient;
 use Aws\SimpleDb\SimpleDbClient;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
