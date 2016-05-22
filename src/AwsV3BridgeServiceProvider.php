@@ -11,7 +11,7 @@ use Silex\ServiceProviderInterface;
  */
 class AwsV3BridgeServiceProvider implements ServiceProviderInterface
 {
-    const VERSION = '2.0.2';
+    const VERSION = '3.0.0';
 
     public function register(Application $app)
     {
