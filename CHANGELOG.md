@@ -8,6 +8,8 @@ It has links for the version diffs at the bottom.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [3.0.0] - 2016-05-22
 ### Added
 - Support Silex 2
 ### Removed
