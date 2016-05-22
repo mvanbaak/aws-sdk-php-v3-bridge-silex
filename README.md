@@ -16,7 +16,7 @@ The AWS Service Provider can be installed via [Composer](http://getcomposer.org)
 ```json
 {
     "require": {
-        "mvbcoding/aws-sdk-php-v3-bridge-silex": "^2.0"
+        "mvbcoding/aws-sdk-php-v3-bridge-silex": "^3.0"
     }
 }
 ```
