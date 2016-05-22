@@ -20,7 +20,6 @@ class AwsV3BridgeServiceProviderTest extends \PHPUnit_Framework_TestCase
                 ],
             ],
         ]);
-        $provider->boot($app);
 
         $this->assertEquals('2009-04-15', $app['aws.config']['version']);
         $this->assertEquals('us-east-1', $app['aws.config']['region']);
@@ -44,10 +43,9 @@ class AwsV3BridgeServiceProviderTest extends \PHPUnit_Framework_TestCase
                 ],
             )
         ));
-        $provider->boot($app);
 
         // Get the region of simpledb service, which should
         // throw an InvalidArgumentException because of missing config
-        $region = $app['aws.simpledb']->getRegion();
+        $app['aws.simpledb']->getRegion();
     }
 }
